@@ -1,0 +1,8 @@
+flask
+flask-cors
+pdfplumber
+Pillow
+requests
+groq
+pytesseract
+gunicorn

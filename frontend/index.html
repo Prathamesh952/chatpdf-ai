@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>chatpdf.ai</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div id="avatar" class="avatar hidden"></div>
+            <img src="logo.png" class="sidebar-logo" />
+
+
+            <button class="new-chat" onclick="newChat()">＋ New Chat</button>
+
+            <div id="history" class="history"></div>
+        </aside>
+
+        <!-- CHAT -->
+        <main class="chat">
+            <div class="welcome">
+                <img src="logo.png" class="hero-logo" />
+                <h1>How can I help you?</h1>
+                <p>Upload a PDF and ask anything</p>
+            </div>
+
+            <div id="messages" class="messages"></div>
+
+            <div class="input-bar">
+                <label class="attach">
+        <i class="fa-solid fa-paperclip"></i>
+        <input type="file" id="fileInput" hidden />
+      </label>
+
+                <input id="question" placeholder="Ask about your PDF…" />
+
+                <button onclick="ask()">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+            </div>
+        </main>
+    </div>
+
+    <canvas id="snowfall"></canvas>
+
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

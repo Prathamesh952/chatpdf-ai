@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.env
+
+# Storage (user data — don't push to GitHub)
+backend/storage/
+
+# Virtual env
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
