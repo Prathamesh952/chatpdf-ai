@@ -16,8 +16,17 @@ except Exception:
 from groq import Groq
 
 app = Flask(__name__)
-CORS(app)
+from flask_cors import CORS
 
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "https://chatwithpdfai.netlify.app",
+            "http://localhost:5500",
+            "http://127.0.0.1:5500"
+        ]
+    }
+})
 app.config["MAX_CONTENT_LENGTH"] = 500 * 1024 * 1024  # ~500MB
 
 # =========================
